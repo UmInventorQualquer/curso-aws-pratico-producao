@@ -1,0 +1,26 @@
+{
+    "apps": [
+        {
+            "name"        : "api",
+            "script"      : "dist/index.js",
+            "instances"   : 2,
+            "exec_mode"   : "cluster",
+            "watch"       : false,
+            "merge_logs"  : true,
+            "cwd"         : "/app/www/api/",
+            "env_production" : {
+                "NODE_ENV": process.env.NODE_ENV,
+                "INSTANCE": process.env.INSTANCE,
+
+                "HOST": process.env.HOST,
+                "PORT": process.env.PORT,
+
+                "MYSQL_HOST": process.env.MYSQL_HOST,
+                "MYSQL_PORT": process.env.MYSQL_PORT,
+                "MYSQL_USER": process.env.MYSQL_USER,
+                "MYSQL_PASSWORD": process.env.MYSQL_PASSWORD,
+                "MYSQL_DATABASE": process.env.MYSQL_DATABASE
+            }
+        }
+    ]
+}

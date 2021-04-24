@@ -1,0 +1,22 @@
+version: "3"
+services:
+
+  api.prod.docker:
+    container_name: "cursoaws_api"
+    restart: "always"
+    image: cursoaws_api
+    user: root
+    working_dir: /app/www/
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/app/
+    expose:
+      - 3001
+    ports:
+      - 3001:3001
+    env_file:
+      - /etc/environment
+    command: "/./app/docker/loopback/start.sh"
+
+

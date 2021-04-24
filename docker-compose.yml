@@ -1,0 +1,35 @@
+version: "3"
+services:
+
+  api.dev.docker:
+    container_name: "cursoaws_api"
+    image: cursoaws_api
+    user: root
+    working_dir: /app/www/
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./:/app/
+    expose:
+      - 3001
+    ports:
+      - 3001:3001
+    env_file:
+      - docker/loopback/docker.env
+    command: "/./app/docker/loopback/start.sh"
+
+  mysql.dev.docker:
+    container_name: "cursoaws_mysql"
+    image: cursoaws_mysql
+    user: root
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dev_cursoaws
+    volumes:
+      - ./:/app/
+    expose:
+      - 3306
+    ports:
+      - 3306:3306
+
+

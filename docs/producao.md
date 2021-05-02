@@ -29,7 +29,7 @@ sudo yum install -y git
 sudo mkdir /app
 sudo chown -R ec2-user:ec2-user /app
 cd /app
-git clone https://github.com/UmInventorQualquer/curso-aws-pratico-api.git uiq
+git clone https://github.com/UmInventorQualquer/curso-aws-pratico-producao.git uiq
 cd uiq
 ./docker/production-init.sh
 ```

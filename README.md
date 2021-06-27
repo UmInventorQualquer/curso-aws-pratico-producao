@@ -14,7 +14,7 @@ Para aprender como executar esse ambiente em seu computador, acesse a documenta�
 
 Para publicar esta aplicação assista à playlist do Curso AWS na Prática do Canal Um Inventor Qualquer
 
-https://www.youtube.com/watch?v=j6yImUbs4OA&list=PLOF5f9_x-OYUaqJar6EKRAonJNSHDFZUm
+https://youtu.be/R-X3cZV2ftI
 
 
 

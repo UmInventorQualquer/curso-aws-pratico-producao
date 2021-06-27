@@ -1,6 +1,6 @@
 # Curso AWS Prático
 
-Este repositório é o resultado da aula 5 do curso de AWS na Prática do canal [Um Inventor Qualquer](https://www.youtube.com/c/UmInventorQualquer)
+Este repositório é o resultado da aula 9 do curso de AWS na Prática do canal [Um Inventor Qualquer](https://www.youtube.com/c/UmInventorQualquer)
 no YouTube.
 
 Para aprender como executar esse ambiente em seu computador, acesse a documentação do [Docker](docs/docker.md).

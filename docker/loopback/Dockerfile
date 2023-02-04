@@ -12,7 +12,7 @@ RUN mkdir /app
 
 # Update Linux Packages
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install mysql-client -y
+RUN apt-get install default-mysql-client -y
 
 # Run update and Strongloop install
 RUN npm install -g npm

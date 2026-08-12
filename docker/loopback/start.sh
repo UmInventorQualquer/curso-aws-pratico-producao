@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-echo 'Checking up MySQL...'
-until mysql -u$MYSQL_USER -p$MYSQL_PASSWORD -h $MYSQL_HOST -e ";" ; do
-    echo 'Waiting MySQL...'
-    sleep 5
+until mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h "$MYSQL_HOST" --skip-ssl -e ";" 2>/dev/null; do
+  echo 'Waiting MySQL...'
+  sleep 5
 done
 
 DIR="/app/www/api/dist"

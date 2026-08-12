@@ -1,9 +1,8 @@
 # our base image
-FROM mysql:5.7.28
+FROM mysql:8.0
 
 # specify the port number the container should expose
 EXPOSE 3306
 
-USER root
-RUN apt-get update -y
-RUN apt-get install -y apt-utils
+# use mysql_native_password for compatibility with the old mysql client
+CMD ["mysqld", "--default-authentication-plugin=mysql_native_password"]
